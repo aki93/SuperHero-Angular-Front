@@ -1,0 +1,22 @@
+<div id=searchBar>
+<section>
+    <input id="searchBar" name="searchName"  [(ngModel)]="searchName" type="text"  >
+    <button  type="submit"  *ngIf="close != true" (click)="searchHero(searchName)">Search</button>
+    <button (click)="closeSearch()" *ngIf="close" type="submit"  >Close</button>
+</section>
+
+<div id="heroFind" class="container"></div>
+<table id="homePanel" *ngIf="close">
+
+  <tr *ngFor="let heroes of hero">
+
+    <td>
+        <div  class="card">
+          <h5>{{heroes.name}}</h5>
+      <img  src={{heroes.image.url}} >
+      <button (click)="addHero(heroes)"  type="button" class="btn btn-warning"  >Add</button>
+      </div>
+    </td>
+  </tr>
+</table>
+</div>

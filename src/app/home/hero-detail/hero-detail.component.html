@@ -1,0 +1,53 @@
+<div class="abrir-modal" *ngIf="detailService.modal" >
+  <div class="card">
+<div class="modal" tabindex="-1" role="dialog" style="display:block">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{heroDetail.name}}</h5>
+        <button (click)="cerrarModal()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div  id="heroCard" class="card">
+           <img class="image"  src={{heroDetail.image.url}} >
+
+       <table >
+         <tr>
+         <td >Weight:</td>
+         <td >{{heroDetail.appearance.weight}}</td>
+         </tr>
+         <tr>
+         <td >Height:</td>
+         <td>{{heroDetail.appearance.height}}</td>
+         </tr>
+         <tr>
+         <td >Alias:</td>
+         <td>{{heroDetail.biography.aliases}}</td>
+         </tr>
+         <tr>
+         <td >Eye Color:</td>
+         <td >{{heroDetail.appearance['eye-color']}}</td>
+         </tr>
+         <tr>
+         <td >Hair Color:</td>
+         <td>{{heroDetail.appearance['hair-color']}}</td>
+         </tr>
+         <tr>
+         <td >Work Place:</td>
+         <td id="com">{{heroDetail.work.base}}</td>
+         </tr>
+         </table>
+         </div>
+      </div>
+      <div class="modal-footer">
+
+        <button  (click)="cerrarModal()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>

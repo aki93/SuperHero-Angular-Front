@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">SuperHero Api</a>
+  <button id="logoutBtn"(click)="logout()" type="button" class="btn btn-dark">LogOut</button>
+</nav>
+<app-hero-detail *ngIf="selectedHero"[heroDetail] = "selectedHero"> </app-hero-detail>
+<div  class="container">
+<div  class="row">
+  <div id="heroSearch" class="container">
+<app-hero-search (heroAdded) = addHero($event)></app-hero-search>
+  </div>
+  <div id="heroHome" class="container" >
+    <div id="teamStats"  class="flex-container">
+    <div id="teamType" ></div>
+    <div id="totalStats" ></div>
+    <div id="averageMeasures"></div>
+    </div>
+<table id="homePanel" >
+
+  <tr *ngFor="let hero of heroArray">
+<td>
+  <div  id="heroCard" class="card" >
+    <img  src={{hero.image.url}} >
+      <h4 >{{hero.name}}</h4>
+      <table >
+        <tr>
+        <td >Intelligence:</td>
+        <td id="int">{{hero.powerstats.intelligence}}</td>
+        </tr>
+        <tr>
+        <td >Strength:</td>
+        <td id="str">{{hero.powerstats.strength}}</td>
+        </tr>
+        <tr>
+        <td >Speed:</td>
+        <td id="spd">{{hero.powerstats.speed}}</td>
+        </tr>
+        <tr>
+        <td >Durability:</td>
+        <td id="dur">{{hero.powerstats.durability}}</td>
+        </tr>
+        <tr>
+        <td >Power:</td>
+        <td id="pwr">{{hero.powerstats.power}}</td>
+        </tr>
+        <tr>
+        <td >Combat:</td>
+        <td id="com">{{hero.powerstats.combat}}</td>
+        </tr>
+
+        <tr>
+          <div id="btnPanel">
+        <button  id="detailBtn" (click)="heroDet(hero)" type="button" class="btn btn-primary">Hero Detail</button>
+        <button id="removeBtn"(click)="removeHeroe(hero)" type="button" class="btn btn-danger">Remove Hero</button>
+        </div>
+        </tr>
+      </table>
+
+</div>
+</td>
+      </tr>
+      </table>
+      </div>
+</div>
+</div>

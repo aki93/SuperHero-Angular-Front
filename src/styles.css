@@ -1,0 +1,67 @@
+#logoutBtn{
+
+
+margin-right: 100px
+}
+
+#loginContainer{
+	margin-top: 30px
+}
+
+#homePanel {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+}
+
+#panel{
+	background-color: grey;
+}
+
+#modal{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+#searchBar{
+	margin-top: 10px;
+	display: inline;
+	flex-flow: row wrap;
+	text-align:center;
+}
+
+#teamStats{
+	flex-flow: column wrap;
+	text-align: center;
+
+}
+#btnPanel{
+	margin-top: 10px;
+	margin-bottom: 10px;
+text-align: center;
+}
+#detailBtn{
+	float:left;
+}
+#detailBtn{
+	float: right;
+}
+.flex-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+border-width: 1px;
+border-style: solid;
+border-color: black;
+width: 18rem;
+}
